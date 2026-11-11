@@ -1,0 +1,78 @@
+personal-investing-copilot
+Copyright 2026 personal-investing-copilot contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+本项目的自建部分（文档与脚本，除下文第三方部分外）依 Apache License 2.0 授权。
+`licenses/` 目录内保存的是各上游项目自己的许可证全文，不代表本项目整体的授权声明。
+
+================================================================================
+第三方归属与修改声明（Apache-2.0 第 4 条）
+================================================================================
+
+1. kidulthhh-dotcom/china-stock-fund-analysis-skill (Apache-2.0)
+   https://github.com/kidulthhh-dotcom/china-stock-fund-analysis-skill
+
+   - 改编代码：scripts/data_envelope.py 改编自
+     china-stock-fund-analysis/scripts/cn_finance/contracts.py；
+     scripts/self_test.py 结构性借鉴 scripts/validate_skill.py 的检查思路。
+     均已标注「改编自 / 借鉴」及具体修改清单，未逐字复制业务校验代码。
+   - 改编文档：references/data-sources.md（数据源注册表与输出契约）、
+     references/beginner-explainer.md（投资小白解释层）、
+     references/output-templates.md（Output Contract），
+     均按本 Skill 的「现金理财 → 场内 ETF 配置」主线用中文重写并标注修改。
+   - 许可证全文：licenses/Apache-2.0.txt
+
+   上游 NOTICE.md 原文（保留其归属链）：
+
+   ------------------------------------------------------------------------
+   # Notice
+
+   This project is adapted from concepts and workflow patterns in Anthropic's
+   `financial-services` reference repository:
+
+   https://github.com/anthropics/financial-services
+
+   The original repository is an Anthropic financial-services plugin and
+   managed-agent reference project. This adaptation narrows the scope to a
+   Codex skill for China stock and mainland fund analysis, with public,
+   non-paywalled data sources as the default.
+
+   This repository does not include or require paid institutional data
+   connectors by default.
+   ------------------------------------------------------------------------
+
+   完整原文亦随包分发于 licenses/NOTICE-upstream.txt。
+   本项目未使用 anthropics/financial-services 的任何代码、机构级数据连接器
+   或美股口径模型。
+
+2. 仅方法论参考、未使用实现代码的 MIT 项目
+   - abnerk1/anchor-and-tilt — Copyright (c) 2026 Abner Araujo
+   - himself65/finance-skills — Copyright (c) 2025 Alex Yang
+   - tradermonty/claude-trading-skills — Copyright (c) 2026 TraderMonty
+   各自许可证全文（含版权行）见 licenses/MIT-*.txt。引用范围与改写说明见
+   THIRD_PARTY_NOTICES.md 第二节。
+
+3. 仅采用事实性信息、未复制任何代码的项目
+   - asfamilybank/stock-query：其 README / SKILL.md 声明 MIT，但 GitHub API
+     license 为 null 且仓库无 LICENSE 文件。本项目只采用公开行情端点域名、
+     A 股 6 位 / 港股 5 位 / 美股 ticker 的代码位数规则等不受著作权保护的
+     事实信息，未使用其任何一行实现代码。
+   - references/open-source-toolchain.md 第五节的选型表所列项目（AKShare、
+     yfinance、edgartools、OpenBB、backtrader 等）仅引用名称、许可证、公开
+     接口与能力描述，同样未复制代码或分发其数据。完整清单见
+     THIRD_PARTY_NOTICES.md 第五节。
+
+4. 明确排除：xticktop/skills 等无许可证仓库未引入任何内容。
+
+================================================================================
+商标、数据与背书
+================================================================================
+
+「余额宝」「沪深 300」「中证」等名称仅为说明性指代，相关权利归各自权利人所有。
+本项目不分发任何市场数据，不内置行情、费率、规模或财务数值；所有数字均须
+运行时取得或由用户提供并标注来源与时点。
+
+上述所有上游作者均未参与本项目编写，也未为本项目或其输出结论背书；
+不得使用上游作者、Anthropic 或本项目名义为衍生作品作背书宣传。
+
+本项目输出仅供参考，不构成投资建议。
